@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "docker:up": "docker-compose -f docker-compose.root.yml up",
+    "docker:down": "docker-compose -f docker-compose.root.yml down",
+    "setup-env": "node ./setup-env.js apps/backend/.env.sample apps/backend/.env",
+    "setup-db": "cd apps/backend && npx mikro-orm migration:up"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "turbo": "^2.3.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "name": "cric-monex-root-template",
+  "packageManager": "npm@10.2.3",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+  }
+}

@@ -1,0 +1,13 @@
+services:
+  postgres:
+    extends:
+      file: ./apps/db/docker-compose.db.yml
+      service: postgres
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  db:
+    # Optionally, you can specify driver or additional configuration here if needed.

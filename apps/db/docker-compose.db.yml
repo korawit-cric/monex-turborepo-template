@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:15.7
+    ports:
+      - "5432:5432"
+    container_name: cric-monex-root-template-db
+    volumes:
+      - db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: cric-monex-root-template-db
+    networks:
+      - backend
+
+volumes:
+  db:
+  cache:
