@@ -1,5 +1,7 @@
+/* eslint-disable eslint-comments/require-description -- This file contains multiple eslint-disable directives for specific rules */
+/* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react/display-name */
+/* eslint-disable tsdoc/syntax */
 'use client';
 
 import type { DefaultValues, UseFormProps, UseFormReturn } from 'react-hook-form';
@@ -45,6 +47,7 @@ type FormWrapperProps<DataSchema extends Record<string, any>> = {
   children: React.ReactNode;
 };
 
+// eslint-disable-next-line react/display-name
 export const FormWrapper = forwardRef(
   <DataSchema extends Record<string, any>>(
     { formInstance, onSubmit, children }: FormWrapperProps<DataSchema>,

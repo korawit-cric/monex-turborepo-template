@@ -1,5 +1,5 @@
 {
-  "name": "@repo/cric-form",
+  "name" : "@repo/cric-form",
   "version": "0.0.0",
   "sideEffects": [
     "**/*.css"
@@ -34,8 +34,9 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
-    "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-label": "^1.0.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@repo/cric-ui": "*",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.468.0",

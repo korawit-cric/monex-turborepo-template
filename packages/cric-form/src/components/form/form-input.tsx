@@ -7,7 +7,6 @@ import {
   FormMessage,
 } from '@repo/cric-ui/components/shadcn/ui/form.tsx';
 import { Input, type InputProps } from '@repo/cric-ui/components/shadcn/ui/input.tsx';
-import React from 'react';
 import { useFormContext } from 'react-hook-form';
 
 type FormInputProps = {
@@ -17,13 +16,13 @@ type FormInputProps = {
   description?: string;
 } & InputProps;
 
-export const FormInput = ({
+export function FormInput({
   name,
   placeholder,
   label,
   description,
   ...rest
-}: FormInputProps): JSX.Element => {
+}: FormInputProps): JSX.Element {
   const {
     control,
     formState: { isSubmitting },
@@ -35,7 +34,7 @@ export const FormInput = ({
       name={name}
       render={({ field }) => (
         <FormItem>
-          {label && <FormLabel>{label}</FormLabel>}
+          {label ? <FormLabel>{label}</FormLabel> : null}
           <FormControl>
             <Input
               placeholder={placeholder}
@@ -44,10 +43,10 @@ export const FormInput = ({
               disabled={isSubmitting || rest.disabled}
             />
           </FormControl>
-          {description && <FormDescription>{description}</FormDescription>}
+          {description ? <FormDescription>{description}</FormDescription> : null}
           <FormMessage />
         </FormItem>
       )}
     />
   );
-};
+}

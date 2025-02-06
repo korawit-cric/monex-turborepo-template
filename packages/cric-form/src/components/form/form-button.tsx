@@ -8,11 +8,11 @@ type FormButtonProps = {
   onClick?: () => void; // Optional onClick handler
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const FormButton = ({
+export function FormButton({
   children,
   onClick,
   ...rest
-}: FormButtonProps): JSX.Element => {
+}: FormButtonProps): JSX.Element {
   const {
     formState: { isValid, isSubmitting },
   } = useFormContext();
@@ -20,11 +20,11 @@ export const FormButton = ({
   return (
     <Button
       disabled={!isValid || isSubmitting}
-      type="button"
       onClick={onClick}
+      type="button"
       {...rest}
     >
       {children}
     </Button>
   );
-};
+}
