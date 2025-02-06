@@ -11,8 +11,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "@repo/config-tailwind": "*",
-    "@repo/config-typescript": "*",
+    "@repo/tailwind-config": "*",
+    "@repo/typescript-config": "*",
+    "@repo/eslint-config": "*",
     "@repo/cric-form": "*",
     "@repo/cric-ui": "*",
     "@t3-oss/env-nextjs": "^0.10.1",

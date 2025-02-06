@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 import { customHeight, customWidth } from "./src/styles/custom";
-import baseConfig from "@repo/config-tailwind";
+import baseConfig from "@repo/tailwind-config";
 
 const config = {
   ...baseConfig,

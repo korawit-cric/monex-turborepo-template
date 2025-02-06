@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/config-typescript/nextjs.json",
+  "extends": "@repo/typescript-config/nextjs.json",
   "compilerOptions": {
     /* Path Aliases */
     "baseUrl": ".",
@@ -13,7 +13,7 @@
     }
   },
   "include": [
-    ".eslintrc.cjs",
+    ".eslintrc.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",

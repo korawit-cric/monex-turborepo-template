@@ -14,9 +14,9 @@ This Turborepo includes the following packages and apps:
 
 - `@repo/cric-ui`: prebuilt component with tailwind and cn utilities
 - `@repo/cric-form`: form components impremented and managed by React Hook Form extended from @repo/cric-ui
-- `@repo/config-eslint`: ESLint configurations used throughout the monorepo
-- `@repo/config-typescript`: tsconfig.json's used throughout the monorepo
-- `@repo/config-tailwind`: tsconfig.json's used throughout the monorepo
+- `@repo/eslint-config`: ESLint configurations used throughout the monorepo
+- `@repo/typescript-config`: tsconfig.json's used throughout the monorepo
+- `@repo/tailwind-config`: tsconfig.json's used throughout the monorepo
 
 Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
 
