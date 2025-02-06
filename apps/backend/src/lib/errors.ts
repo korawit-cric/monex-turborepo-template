@@ -1,7 +1,7 @@
 import { ValidationError } from "class-validator";
 import { flatten } from "lodash";
 
-import { ValidationArrayError } from "@/repositories/helpers/validator";
+import { ValidationArrayError } from "~/repositories/helpers/validator";
 
 export class BaseError extends Error {
   name: string = "BaseError";

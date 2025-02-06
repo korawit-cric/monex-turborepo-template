@@ -5,11 +5,11 @@ import cors from "cors";
 import "dotenv/config";
 import fs from "fs";
 
-import { errorHandler, errorLogger } from "@/middlewares/errorHandler";
-import { sanitizeRequestBody } from "@/middlewares/requestSanitizer";
-import { initializeLogger, logger } from "@/middlewares/logger";
-import initializeRouter from "@/routes";
-import { initializeDB } from "@/db";
+import { errorHandler, errorLogger } from "~/middlewares/errorHandler";
+import { sanitizeRequestBody } from "~/middlewares/requestSanitizer";
+import { initializeLogger, logger } from "~/middlewares/logger";
+import initializeRouter from "~/routes";
+import { initializeDB } from "~/db";
 
 const initializeServer = async () => {
   const app = express();

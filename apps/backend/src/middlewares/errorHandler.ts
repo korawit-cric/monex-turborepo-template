@@ -5,8 +5,8 @@ import {
 import { NextFunction, Request, Response } from "express";
 import { camelCase, capitalize } from "lodash";
 
-import { BaseError } from "@/lib/errors";
-import { logger } from "@/middlewares/logger";
+import { BaseError } from "~/lib/errors";
+import { logger } from "~/middlewares/logger";
 
 export const errorHandler = (
   err: Error,

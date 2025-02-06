@@ -1,7 +1,7 @@
-import { em } from '@/db';
-import { RecordNotFoundError } from '@/lib/errors';
+import { em } from '~/db';
+import { RecordNotFoundError } from '~/lib/errors';
 import { NextFunction, Request, Response } from 'express'
-import { User } from '@/entities/User'
+import { User } from '~/entities/User'
 import { matchedData } from 'express-validator';
 
 export const getUser = async (

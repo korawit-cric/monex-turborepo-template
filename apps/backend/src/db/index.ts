@@ -4,7 +4,7 @@ import type { EntityManager, PostgreSqlDriver } from "@mikro-orm/postgresql";
 import { NextFunction } from "express";
 import { Express } from "express";
 
-import mikroORMConfig from "@/db/mikro-orm.config";
+import mikroORMConfig from "~/db/mikro-orm.config";
 
 export let orm: MikroORM;
 export let em: EntityManager;

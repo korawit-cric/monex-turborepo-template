@@ -7,7 +7,7 @@ import {
   validationResult,
 } from "express-validator";
 
-import { InvalidParams } from "@/lib/errors";
+import { InvalidParams } from "~/lib/errors";
 
 export const validateRequest = (
   validations: (ValidationChain | ContextRunner)[]

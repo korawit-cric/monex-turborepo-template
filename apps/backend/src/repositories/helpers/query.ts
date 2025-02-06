@@ -1,7 +1,7 @@
 import { EntityRepository, SelectQueryBuilder } from "@mikro-orm/postgresql";
 
-import { getPaginationOpts } from "@/lib/pagination";
-import { ListOpts } from "@/repositories/helpers/type";
+import { getPaginationOpts } from "~/lib/pagination";
+import { ListOpts } from "~/repositories/helpers/type";
 
 export const appendQueryOpts = <EntityType extends object>(
   qb: SelectQueryBuilder<EntityType>,

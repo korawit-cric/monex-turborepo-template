@@ -1,7 +1,7 @@
 import { Collection } from "@mikro-orm/core";
 import { ValidationError, ValidatorOptions, validate } from "class-validator";
 
-import { ArrayValidationError, EntityValidationError } from "@/lib/errors";
+import { ArrayValidationError, EntityValidationError } from "~/lib/errors";
 
 export type ValidationArrayError = {
   index: number;

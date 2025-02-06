@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 
-import { parseJSONList } from "@/controllers/helpers/requestHelper";
+import { parseJSONList } from "~/controllers/helpers/requestHelper";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type BodyType = { [key: string]: any };

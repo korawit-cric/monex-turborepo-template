@@ -1,6 +1,6 @@
-import { UserRepository } from '@/repositories/user.repository';
 import { Entity, EntityRepositoryType, PrimaryKey, Property } from '@mikro-orm/core';
 import { IsEmail } from 'class-validator';
+import { UserRepository } from '~/repositories/user.repository';
 
 
 export interface UserParams {
