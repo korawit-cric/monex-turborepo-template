@@ -29,6 +29,7 @@ export const Primary: Story = {
 
     type FormType = z.infer<typeof formSchema>;
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks -- useCustomForm must be called inside the render function
     const form = useCustomForm<FormType>({
       defaultValues: {
         email: "demo@devvianto605.info",
@@ -40,13 +41,14 @@ export const Primary: Story = {
       <FormWrapper<FormType>
         formInstance={form}
         onSubmit={(formValue) => {
+          // eslint-disable-next-line no-alert -- using alert to show form values for demonstration purposes
           alert(JSON.stringify(formValue));
         }}
       >
         <FormInput
           label="Email"
           name="email"
-          placeholder={"m@example.com"}
+          placeholder="m@example.com"
           type="email"
         />
         <FormInput label="Password" name="password" type="password" />

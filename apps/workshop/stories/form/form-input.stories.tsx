@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { FormButton } from "@repo/cric-ui/components/form/form-button.tsx";
 import {
   FormWrapper,
   useCustomForm,
@@ -29,24 +28,25 @@ export const Primary: Story = {
 
     type FormType = z.infer<typeof formSchema>;
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks -- using a hook inside a render function for Storybook
     const form = useCustomForm<FormType>({
       schema: formSchema,
     });
 
-    // ?: Form Component cannot be used outside of FormWrapper, should we perhaps fix this? Nope. That should be separate component for common button.
     return (
       <FormWrapper<FormType>
         formInstance={form}
         onSubmit={(formValue) => {
+          // eslint-disable-next-line no-alert -- using alert to display form values for demonstration purposes
           alert(JSON.stringify(formValue));
         }}
       >
         <FormInput
+          description={props.description}
           label={props.label}
           name={props.name}
           placeholder={props.placeholder}
           type={props.type}
-          description={props.description}
         />
       </FormWrapper>
     );
