@@ -9,9 +9,6 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbo: true,
-  },
   webpack(config) {
     config.module.rules.push(
       {
