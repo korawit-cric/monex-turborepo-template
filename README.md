@@ -47,7 +47,7 @@ npm run setup-env
 ```
 
 ```bash
-npm setup-db
+npm run setup-db
 ```
 
 ```bash
