@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# yarn test && yarn lint use this if you have yarn test
+npm run lint && npm run build
