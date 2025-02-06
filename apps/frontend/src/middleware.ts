@@ -1,25 +1,9 @@
-import { localePrefix, locales, defaultLocale } from '~/lib/next-intl';
-import createIntlMiddleware from 'next-intl/middleware';
-import {
-  NextFetchEvent,
-  NextMiddleware,
-  type NextRequest,
-} from 'next/server';
+import createMiddleware from 'next-intl/middleware';
+import { routing } from './lib/next-intl';
 
-export default middleware(
-  createIntlMiddleware({
-    defaultLocale,
-    locales,
-    localePrefix,
-  }),
-);
-
-function middleware(intlMiddleware: NextMiddleware) {
-  return async (req: NextRequest, event: NextFetchEvent) => {
-    return await intlMiddleware(req, event);
-  };
-}
+export default createMiddleware(routing);
 
 export const config = {
-  matcher: ['/', '/(th|en)/:path*'],
+  // Match only internationalized pathnames
+  matcher: ['/', '/(th|en)/:path*']
 };
