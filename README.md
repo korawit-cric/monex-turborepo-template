@@ -58,6 +58,8 @@ npm run dev
 
 To change all apps and package name prefixes in every package.json, Docker container, etc. within one step, globally search `cric-monex-root-template` and replace all. (through IDE)
 
+Remark: commit-lint rules require the commit name to be in format `<type>(monex-root): <description>` ...See `commitlint.config.js`
+
 ## Cric's MONEX Template Development Process
 ![image](https://github.com/user-attachments/assets/79f526de-17a0-4a08-afc1-2ee88d4ebed2)
 
