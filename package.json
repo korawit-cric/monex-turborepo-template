@@ -12,7 +12,8 @@
     "docker:down": "docker-compose -f docker-compose.root.yml down",
     "setup-env": "node ./setup-env.js apps/backend/.env.sample apps/backend/.env",
     "setup-db": "cd apps/backend && npx mikro-orm migration:up",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clean-node": "rm -rf node_modules package-lock.json && find apps packages -type d -name 'node_modules' -exec rm -rf {} + && find apps packages -type f -name 'package-lock.json' -delete"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
