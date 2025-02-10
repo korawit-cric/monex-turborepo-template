@@ -7,12 +7,10 @@
       "~/*": [
         "./src/*"
       ],
-      "~/assets/*": [
-        "./public/assets/*"
-      ]
     }
   },
   "include": [
+    "src/types/svgr.d.ts",
     ".eslintrc.ts",
     "next-env.d.ts",
     "**/*.ts",

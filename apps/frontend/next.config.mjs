@@ -10,26 +10,23 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   webpack(config) {
-    config.module.rules.push(
-      {
-        test: /\.svg$/,
-        use: [
-          {
-            loader: "@svgr/webpack",
-            options: {
-              svgo: false, // Disable svgo to avoid removing necessary attributes
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ["babel-loader"],
-      },
-    );
+    config.module.rules.push({
+      test: /\.svg$/i,
+      use: ["@svgr/webpack"],
+    });
 
     return config;
+  },
+
+  experimental: {
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js'
+        }
+      },
+    }
   },
 };
 
