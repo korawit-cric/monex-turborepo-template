@@ -1,14 +1,12 @@
 import "~/styles/globals.css";
 
-import { GeistSans } from "geist/font/sans";
-
 import AppProvider from "../providers/AppProvider";
 
-import { Inter } from "next/font/google";
+import { Schibsted_Grotesk } from "next/font/google";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 
-const inter = Inter({ subsets: ["latin"] });
+const schibstedGtostesk = Schibsted_Grotesk({ subsets: ["latin"] });
 
 export const metadata = {
   title: "cric-monex-root-template",
@@ -35,7 +33,7 @@ export default async function RootLayout(
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${GeistSans.variable} ${inter.className}`}>
+    <html lang={locale} className={`${schibstedGtostesk.className}`}>
       <body>
       <NextIntlClientProvider messages={messages}>
         <AppProvider>{children}</AppProvider>
