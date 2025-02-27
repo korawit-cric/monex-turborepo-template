@@ -20,6 +20,7 @@ module.exports = {
       },
     },
   },
+  indent: [2, 2, { SwitchCase: 1 }], // Sync indent setting with `prettier`
   ignorePatterns: [
     // Ignore dotfiles
     ".*.js",
