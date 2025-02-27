@@ -1,10 +1,41 @@
-import React from 'react';
+import "~/styles/globals.css";
 
-const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-   return (
-      <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#1e3a8a] to-[#15162c] text-white">
-         {children}
-      </div>
-   );
+import AppProvider from "../../providers/AppProvider";
+
+import { Schibsted_Grotesk } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+
+const schibstedGtostesk = Schibsted_Grotesk({ subsets: ["latin"] });
+
+export const metadata = {
+  title: "cric-monex-root-template",
+  description:
+    "A boilerplate template for building a monorepo architecture with Turborepo, Next.js, Express and cric-packages.",
+  icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
-export default MainLayout;
+
+export default async function RootLayout(
+  props: Readonly<{
+    children: React.ReactNode;
+    params: Promise<{ locale: string }>;
+  }>,
+) {
+  const params = await props.params;
+
+  const { locale } = params;
+
+  const { children } = props;
+
+  const messages = await getMessages();
+
+  return (
+    <html lang={locale} className={`${schibstedGtostesk.className}`}>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          <AppProvider>{children}</AppProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}

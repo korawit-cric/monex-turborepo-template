@@ -1,45 +1,11 @@
-import "~/styles/globals.css";
+import type { ReactNode } from "react";
 
-import AppProvider from "../providers/AppProvider";
-
-import { Schibsted_Grotesk } from "next/font/google";
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
-
-const schibstedGtostesk = Schibsted_Grotesk({ subsets: ["latin"] });
-
-export const metadata = {
-  title: "cric-monex-root-template",
-  description: "A boilerplate template for building a monorepo architecture with Turborepo, Next.js, Express and cric-packages.",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+type RootLayoutProps = {
+  children: ReactNode;
 };
 
-export default async function RootLayout(
-  props: Readonly<{
-    children: React.ReactNode;
-    params: Promise<{locale: string}>;
-  }>
-) {
-  const params = await props.params;
-
-  const {
-    locale
-  } = params;
-
-  const {
-    children
-  } = props;
-
-  const messages = await getMessages();
-
-  return (
-    <html lang={locale} className={`${schibstedGtostesk.className}`}>
-      <body>
-      <NextIntlClientProvider messages={messages}>
-        <AppProvider>{children}</AppProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  );
+// Since we have a `not-found.tsx` page on the root, a layout file
+// is required, even if it's just passing children through.
+export default function RootLayout({ children }: RootLayoutProps) {
+  return children;
 }
-
