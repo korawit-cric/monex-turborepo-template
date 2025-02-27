@@ -1,0 +1,45 @@
+services:
+  postgres:
+    extends:
+      file: ./apps/db/docker-compose.db.yml
+      service: postgres
+
+  # directus:
+  #   extends:
+  #     file: ./apps/directus/docker-compose.directus.yml
+  #     service: directus
+
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: ./apps/frontend/Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - app_network
+
+  # backend:
+  #   container_name: backend
+  #   build:
+  #     context: .
+  #     dockerfile: ./apps/backend/Dockerfile
+  #   restart: always
+  #   ports:
+  #     - 3001:3001
+  #   depends_on:
+  #     - postgres
+  #   networks:
+  #     - app_network
+  #   environment:
+  #     - NODE_ENV=production
+  #     - DATABASE_URL=postgres://postgres:postgres@postgres:5432/cit-web-db
+  #     - CLIENT_ORIGIN=http://localhost:3000
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  db: # Optionally, you can specify driver or additional configuration here if needed.

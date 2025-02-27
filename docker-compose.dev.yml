@@ -1,0 +1,16 @@
+services:
+  postgres:
+    extends:
+      file: ./apps/db/docker-compose.db.yml
+      service: postgres
+  # directus:
+  #   extends:
+  #     file: ./apps/directus/docker-compose.directus.yml
+  #     service: directus
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  db: # Optionally, you can specify driver or additional configuration here if needed.
