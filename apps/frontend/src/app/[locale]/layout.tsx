@@ -1,5 +1,5 @@
-import "~/styles/globals.css";
-import "@repo/cric-ui/styles.css";
+import "@repo/cric-ui/index.css";
+import "@repo/design-system/styles.css";
 
 import AppProvider from "../../providers/AppProvider";
 

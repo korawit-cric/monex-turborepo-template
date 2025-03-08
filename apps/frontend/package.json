@@ -13,6 +13,7 @@
   "dependencies": {
     "@repo/cric-form": "*",
     "@repo/cric-ui": "*",
+    "@repo/design-system": "*",
     "@repo/eslint-config": "*",
     "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
@@ -25,8 +26,8 @@
     "react-dom": "^18.2.0",
     "next-intl": "^3.10.0",
     "zod": "^3.23.3"
-    },
-    "devDependencies": {
+  },
+  "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@types/eslint": "^8.56.2",
