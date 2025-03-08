@@ -5,16 +5,16 @@ import {
   FormControl,
   FormDescription,
   FormMessage,
-} from '@repo/cric-ui/components/shadcn/ui/form.tsx';
-import { Input, type InputProps } from '@repo/cric-ui/components/shadcn/ui/input.tsx';
-import { useFormContext } from 'react-hook-form';
+} from "@repo/cric-ui/components/shadcn/ui/form";
+import { Input } from "@repo/cric-ui/components/shadcn/ui/input";
+import { useFormContext } from "react-hook-form";
 
 type FormInputProps = {
   name: string;
   placeholder?: string;
   label?: string;
   description?: string;
-} & InputProps;
+} & React.ComponentProps<"input">;
 
 export function FormInput({
   name,
@@ -23,11 +23,31 @@ export function FormInput({
   description,
   ...rest
 }: FormInputProps): JSX.Element {
-  const {
-    control,
-    formState: { isSubmitting },
-  } = useFormContext();
+  // Try to get form context, but don't error if it doesn't exist
+  const formContext = useFormContext();
+  const control = formContext.control;
+  const isSubmitting = formContext.formState.isSubmitting || false;
 
+  // If no form context is available, render just the input with basic props
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  if (!control) {
+    return (
+      <div>
+        {label ? <div>{label}</div> : null}
+        <Input
+          disabled={rest.disabled === true}
+          name={name}
+          placeholder={placeholder}
+          {...rest}
+        />
+        {description ? (
+          <div className="text-muted-foreground text-sm">{description}</div>
+        ) : null}
+      </div>
+    );
+  }
+
+  // Normal render with form context
   return (
     <FormField
       control={control}
@@ -40,10 +60,12 @@ export function FormInput({
               placeholder={placeholder}
               {...rest}
               {...field}
-              disabled={isSubmitting || rest.disabled}
+              disabled={isSubmitting || rest.disabled === true}
             />
           </FormControl>
-          {description ? <FormDescription>{description}</FormDescription> : null}
+          {description ? (
+            <FormDescription>{description}</FormDescription>
+          ) : null}
           <FormMessage />
         </FormItem>
       )}

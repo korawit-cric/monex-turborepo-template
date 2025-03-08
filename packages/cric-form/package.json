@@ -1,5 +1,5 @@
 {
-  "name" : "@repo/cric-form",
+  "name": "@repo/cric-form",
   "version": "0.0.0",
   "sideEffects": [
     "**/*.css"
@@ -8,21 +8,22 @@
     "dist"
   ],
   "exports": {
-    "./styles/global.css": "./dist/index.css",
-    "./components": "./src/components/index.ts",
-    "./components/*": "./src/components/*"
+    "./index.css": "./dist/index.css",
+    "./*": "./src/*.tsx"
   },
   "license": "MIT",
   "scripts": {
-    "build": "tailwindcss -i ./src/styles/global.css -o ./dist/index.css",
-    "lint": "eslint src/",
-    "dev": "tailwindcss -i ./src/styles/global.css -o ./dist/index.css --watch",
-    "type-check": "tsc --noEmit"
+    "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
+    "check-types": "tsc --noEmit",
+    "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+    "lint": "eslint src"
   },
   "peerDependencies": {
     "react": "^18.2.0"
   },
   "devDependencies": {
+    "@repo/cric-ui": "*",
+    "@repo/design-system": "*",
     "@repo/eslint-config": "*",
     "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
@@ -34,9 +35,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
-    "@radix-ui/react-label": "^1.0.0",
-    "@radix-ui/react-slot": "^1.1.0",
-    "@repo/cric-ui": "*",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.468.0",
