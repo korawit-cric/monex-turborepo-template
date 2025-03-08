@@ -1,7 +1,6 @@
 import * as React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { DayPicker } from "react-day-picker";
-
 import { cn } from "#lib/utils.ts";
 import { buttonVariants } from "#components/shadcn/ui/button.tsx";
 
@@ -13,7 +12,6 @@ function Calendar({
 }: React.ComponentProps<typeof DayPicker>) {
   return (
     <DayPicker
-      showOutsideDays={showOutsideDays}
       className={cn("p-3", className)}
       classNames={{
         months: "flex flex-col sm:flex-row gap-2",
@@ -58,13 +56,16 @@ function Calendar({
         ...classNames,
       }}
       components={{
+        // eslint-disable-next-line react/no-unstable-nested-components, @typescript-eslint/no-shadow
         IconLeft: ({ className, ...props }) => (
           <ChevronLeft className={cn("size-4", className)} {...props} />
         ),
+        // eslint-disable-next-line react/no-unstable-nested-components, @typescript-eslint/no-shadow
         IconRight: ({ className, ...props }) => (
           <ChevronRight className={cn("size-4", className)} {...props} />
         ),
       }}
+      showOutsideDays={showOutsideDays}
       {...props}
     />
   );

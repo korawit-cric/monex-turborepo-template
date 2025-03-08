@@ -42,5 +42,10 @@ module.exports = {
   rules: {
     "import/no-default-export": "off",
     "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-confusing-void-expression": "off",
+    "eslint-comments/require-description": "off",
+    "no-implicit-coercion": "off",
+    "react/function-component-definition": "off",
   },
 };
