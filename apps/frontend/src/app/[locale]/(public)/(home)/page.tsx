@@ -4,7 +4,6 @@ import { useLocale } from "next-intl";
 import { Locale } from "~/lib/next-intl";
 import { Link } from "~/lib/next-intl/navigation";
 import CricLogo from "~/assets/logo/cric-logo.svg"; // adjust path as needed
-import { Button } from "@repo/cric-ui/components/shadcn/ui/button";
 // import Image from "next/image";
 
 export default function Store(): JSX.Element {
@@ -49,7 +48,6 @@ export default function Store(): JSX.Element {
           Next.js
         </Link>
       </p>
-      <Button className="bg-primary">Asaka</Button>
     </div>
   );
 }

@@ -4,16 +4,21 @@
 
 @layer base {
   :root {
-    --primary-dark: hsl(0, 84.2%, 60.2%);
+    --primary-dark: hsl(0, 84.2%, 40.2%);
     --primary: hsl(0, 84.2%, 60.2%);
+    --primary-light: hsl(0, 84.2%, 80.2%);
 
-    --secondary: hsl(240, 4.8%, 95.9%);
+    --secondary-dark: hsl(212, 97%, 27%);
+    --secondary: hsl(212, 97%, 47%);
+    --secondary-light: hsl(212, 97%, 67%);
 
-    --primary-foreground: hsl(0, 0%, 98%);
-    --secondary-foreground: hsl(240, 5.9%, 10%);
+    --primary-foreground: var(--foreground);
+    --secondary-foreground: var(--background);
 
-    --background: hsl(0, 0%, 100%);
-    --foreground: hsl(240, 10%, 3.9%);
+    --background: hsl(240, 10%, 3.9%);
+    --foreground: hsl(0, 0%, 100%);
+
+    /* Default CSS Variables of Shadcn-ui Components  */
 
     --card: hsl(0, 0%, 100%);
     --card-foreground: hsl(240, 10%, 3.9%);
@@ -45,16 +50,20 @@
 
     --radius: 0.5rem;
   }
-  .dark {
-    --primary: hsl(0, 0%, 98%);
+  /* .dark {
+    --primary-dark: hsl(0, 84.2%, 40.2%);
+    --primary: hsl(0, 84.2%, 60.2%);
+    --primary-light: hsl(0, 84.2%, 80.2%);
 
-    --secondary: hsl(240, 3.7%, 15.9%);
+    --secondary-dark: hsl(212, 97%, 27%);
+    --secondary: hsl(212, 97%, 47%);
+    --secondary-light: hsl(212, 97%, 67%);
 
-    --primary-foreground: hsl(240, 5.9%, 10%);
-    --secondary-foreground: hsl(0, 0%, 98%);
+    --primary-foreground: var(--foreground);
+    --secondary-foreground: var(--background);
 
-    --background: hsl(240, 10%, 3.9%);
-    --foreground: hsl(0, 0%, 98%);
+    --background: hsl(0, 0%, 100%);
+    --foreground: hsl(240, 10%, 3.9%);
 
     --card: hsl(240, 10%, 3.9%);
     --card-foreground: hsl(0, 0%, 98%);
@@ -83,7 +92,7 @@
     --sidebar-accent-foreground: hsl(240, 4.8%, 95.9%);
     --sidebar-border: hsl(240, 3.7%, 15.9%);
     --sidebar-ring: hsl(217.2, 91.2%, 59.8%);
-  }
+  } */
 }
 
 @layer base {
