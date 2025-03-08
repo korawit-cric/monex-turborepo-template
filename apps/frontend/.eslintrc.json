@@ -1,6 +1,5 @@
 {
   "extends": [
-    "next/core-web-vitals",
-    "next/typescript"
+    "@repo/eslint-config/next.js"
   ]
 }
