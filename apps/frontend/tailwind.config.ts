@@ -1,9 +1,8 @@
-import type { Config } from "tailwindcss";
+import sharedConfig from "@repo/tailwind-config";
 import { customHeight, customWidth } from "./src/styles/custom";
-import baseConfig from "@repo/tailwind-config";
 
 const config = {
-  ...baseConfig,
+  presets: [sharedConfig],
   theme: {
     extend: {
       minHeight: {
@@ -26,6 +25,6 @@ const config = {
       },
     },
   },
-} satisfies Config;
+};
 
 export default config;

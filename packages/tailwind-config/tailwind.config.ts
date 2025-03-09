@@ -40,11 +40,15 @@ const config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: {
+          dark: "var(--primary-dark)",
           DEFAULT: "var(--primary)",
+          light: "var(--primary-light)",
           foreground: "var(--primary-foreground)",
         },
         secondary: {
+          dark: "var(--secondary-dark)",
           DEFAULT: "var(--secondary)",
+          light: "var(--secondary-light)",
           foreground: "var(--secondary-foreground)",
         },
         destructive: {
