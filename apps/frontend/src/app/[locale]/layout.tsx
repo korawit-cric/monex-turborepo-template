@@ -1,11 +1,9 @@
 import "@repo/cric-ui/index.css";
 import "@repo/design-system/styles.css";
 
-import AppProvider from "../../providers/AppProvider";
-
+// eslint-disable-next-line camelcase
 import { Schibsted_Grotesk } from "next/font/google";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { ServerAppProvider, ClientAppProvider } from "~/providers";
 
 const schibstedGtostesk = Schibsted_Grotesk({ subsets: ["latin"] });
 
@@ -16,26 +14,21 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default async function RootLayout(
-  props: Readonly<{
-    children: React.ReactNode;
-    params: Promise<{ locale: string }>;
-  }>,
-) {
-  const params = await props.params;
-
-  const { locale } = params;
-
-  const { children } = props;
-
-  const messages = await getMessages();
+export default async function RootLayout({
+  children,
+  params: paramsPromise,
+}: Readonly<{
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}>) {
+  const { locale } = await paramsPromise;
 
   return (
-    <html lang={locale} className={`${schibstedGtostesk.className}`}>
+    <html className={schibstedGtostesk.className} lang={locale}>
       <body>
-        <NextIntlClientProvider messages={messages}>
-          <AppProvider>{children}</AppProvider>
-        </NextIntlClientProvider>
+        <ServerAppProvider>
+          <ClientAppProvider>{children}</ClientAppProvider>
+        </ServerAppProvider>
       </body>
     </html>
   );
