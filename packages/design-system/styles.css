@@ -4,94 +4,63 @@
 
 @layer base {
   :root {
-    --primary-dark: hsl(0, 84.2%, 40.2%);
-    --primary: hsl(0, 84.2%, 60.2%);
+    /* Example of more color variations  */
+    /* --primary-lighter: hsl(0, 84.2%, 90.2%); */
     --primary-light: hsl(0, 84.2%, 80.2%);
+    --primary: hsl(0, 84.2%, 60.2%);
+    --primary-dark: hsl(0, 84.2%, 40.2%);
+    /* --primary-darker: hsl(0, 84.2%, 20.2%); */
 
-    --secondary-dark: hsl(212, 97%, 27%);
-    --secondary: hsl(212, 97%, 47%);
     --secondary-light: hsl(212, 97%, 67%);
+    --secondary: hsl(212, 97%, 47%);
+    --secondary-dark: hsl(212, 97%, 27%);
 
-    --primary-foreground: var(--foreground);
-    --secondary-foreground: var(--background);
+    --muted-light: hsl(0, 0%, 85%);
+    --muted: hsl(0, 0%, 40%);
+    --muted-dark: hsl(0, 0%, 0%);
+
+    --destructive-light: hsl(0, 84.2%, 80.2%);
+    --destructive: hsl(0, 84.2%, 60.2%);
+    --destructive-dark: hsl(0, 84.2%, 40.2%);
 
     --background: hsl(240, 10%, 3.9%);
     --foreground: hsl(0, 0%, 100%);
 
     /* Default CSS Variables of Shadcn-ui Components  */
 
-    --card: hsl(0, 0%, 100%);
-    --card-foreground: hsl(240, 10%, 3.9%);
-
-    --popover: hsl(0, 0%, 100%);
-    --popover-foreground: hsl(240, 10%, 3.9%);
-
-    --muted: hsl(240, 4.8%, 95.9%);
-    --muted-foreground: hsl(240, 3.8%, 46.1%);
-
-    --accent: hsl(240, 4.8%, 95.9%);
-    --accent-foreground: hsl(240, 5.9%, 10%);
-
-    --destructive: hsl(0, 84.2%, 60.2%);
-    --destructive-foreground: hsl(0, 0%, 98%);
-
-    --border: hsl(240, 5.9%, 90%);
-    --input: hsl(240, 5.9%, 90%);
-    --ring: hsl(240, 10%, 3.9%);
-
-    --sidebar-background: hsl(0, 0%, 98%);
-    --sidebar-foreground: hsl(240, 5.3%, 26.1%);
-    --sidebar-primary: hsl(240, 5.9%, 10%);
-    --sidebar-primary-foreground: hsl(0, 0%, 98%);
-    --sidebar-accent: hsl(240, 4.8%, 95.9%);
-    --sidebar-accent-foreground: hsl(240, 5.9%, 10%);
-    --sidebar-border: hsl(220, 13%, 91%);
-    --sidebar-ring: hsl(217.2, 91.2%, 59.8%);
-
-    --radius: 0.5rem;
-  }
-  /* .dark {
-    --primary-dark: hsl(0, 84.2%, 40.2%);
-    --primary: hsl(0, 84.2%, 60.2%);
-    --primary-light: hsl(0, 84.2%, 80.2%);
-
-    --secondary-dark: hsl(212, 97%, 27%);
-    --secondary: hsl(212, 97%, 47%);
-    --secondary-light: hsl(212, 97%, 67%);
-
     --primary-foreground: var(--foreground);
-    --secondary-foreground: var(--background);
+    --secondary-foreground: var(--foreground);
+    --muted-foreground: var(--foreground);
+    --destructive-foreground: var(--foreground);
 
-    --background: hsl(0, 0%, 100%);
-    --foreground: hsl(240, 10%, 3.9%);
+    --accent-light: var(--secondary-light);
+    --accent: var(--secondary);
+    --accent-dark: var(--secondary-dark);
+    --accent-foreground: var(--foreground);
 
-    --card: hsl(240, 10%, 3.9%);
-    --card-foreground: hsl(0, 0%, 98%);
+    --border: var(--muted-light);
+    --input: var(--muted-light);
+    --ring: var(--muted-dark);
+    --radius: 0.5rem;
 
-    --popover: hsl(240, 10%, 3.9%);
-    --popover-foreground: hsl(0, 0%, 98%);
+    --card: var(--background);
+    --card-foreground: var(--foreground);
 
-    --muted: hsl(240, 3.7%, 15.9%);
-    --muted-foreground: hsl(240, 5%, 64.9%);
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
 
-    --accent: hsl(240, 3.7%, 15.9%);
-    --accent-foreground: hsl(0, 0%, 98%);
-
-    --destructive: hsl(0, 62.8%, 30.6%);
-    --destructive-foreground: hsl(0, 0%, 98%);
-
-    --border: hsl(240, 3.7%, 15.9%);
-    --input: hsl(240, 3.7%, 15.9%);
-    --ring: hsl(240, 4.9%, 83.9%);
-
-    --sidebar-background: hsl(240, 5.9%, 10%);
-    --sidebar-foreground: hsl(240, 4.8%, 95.9%);
-    --sidebar-primary: hsl(224.3, 76.3%, 48%);
-    --sidebar-primary-foreground: hsl(0, 0%, 100%);
-    --sidebar-accent: hsl(240, 3.7%, 15.9%);
-    --sidebar-accent-foreground: hsl(240, 4.8%, 95.9%);
-    --sidebar-border: hsl(240, 3.7%, 15.9%);
-    --sidebar-ring: hsl(217.2, 91.2%, 59.8%);
+    --sidebar-background: var(--background);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
+  }
+  /* Example of Dark Mode CSS Variables */
+  /* .dark {
+  ...
   } */
 }
 

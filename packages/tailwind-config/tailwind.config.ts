@@ -40,29 +40,38 @@ const config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: {
-          dark: "var(--primary-dark)",
-          DEFAULT: "var(--primary)",
           light: "var(--primary-light)",
+          DEFAULT: "var(--primary)",
+          dark: "var(--primary-dark)",
           foreground: "var(--primary-foreground)",
         },
         secondary: {
-          dark: "var(--secondary-dark)",
-          DEFAULT: "var(--secondary)",
           light: "var(--secondary-light)",
+          DEFAULT: "var(--secondary)",
+          dark: "var(--secondary-dark)",
           foreground: "var(--secondary-foreground)",
         },
-        destructive: {
-          DEFAULT: "var(--destructive)",
-          foreground: "var(--destructive-foreground)",
-        },
         muted: {
+          light: "var(--muted-light)",
           DEFAULT: "var(--muted)",
+          dark: "var(--muted-dark)",
           foreground: "var(--muted-foreground)",
         },
+        destructive: {
+          light: "var(--destructive-light)",
+          DEFAULT: "var(--destructive)",
+          dark: "var(--destructive-dark)",
+          foreground: "var(--destructive-foreground)",
+        },
         accent: {
+          light: "var(--accent-light)",
           DEFAULT: "var(--accent)",
+          dark: "var(--accent-dark)",
           foreground: "var(--accent-foreground)",
         },
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
         popover: {
           DEFAULT: "var(--popover)",
           foreground: "var(--popover-foreground)",
@@ -70,16 +79,6 @@ const config = {
         card: {
           DEFAULT: "var(--card)",
           foreground: "var(--card-foreground)",
-        },
-        border: "var(--border)",
-        input: "var(--input)",
-        ring: "var(--ring)",
-        chart: {
-          "1": "var(--chart-1)",
-          "2": "var(--chart-2)",
-          "3": "var(--chart-3)",
-          "4": "var(--chart-4)",
-          "5": "var(--chart-5)",
         },
         sidebar: {
           DEFAULT: "var(--sidebar-background)",
