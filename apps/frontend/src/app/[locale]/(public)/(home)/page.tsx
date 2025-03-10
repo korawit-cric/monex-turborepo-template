@@ -2,10 +2,13 @@
 
 import { useLocale } from "next-intl";
 import { Button } from "@repo/cric-ui/components/shadcn/ui/button";
-import type { Locale } from "~/lib/next-intl";
+import { toast } from "sonner";
 import { Link } from "~/lib/next-intl/navigation";
-import CricLogo from "~/assets/logo/cric-logo.svg"; // adjust path as needed
 import { useRandomUserOperations } from "~/operations/random-user/use-random-user-operations";
+import type { Locale } from "~/lib/next-intl";
+import CricLogo from "~/assets/logo/cric-logo.svg"; // adjust path as needed
+import { mockRandomUser } from "~/services/random-user/mock-random-user";
+import type { User } from "~/services/random-user/type";
 // import Image from "next/image";
 
 export default function Store(): JSX.Element {
@@ -16,6 +19,15 @@ export default function Store(): JSX.Element {
     isGetRandomUserFetching,
     resetRandomUserData,
   } = useRandomUserOperations().getRandomUserInfinitely();
+
+  const { onCreateRandomUser } = useRandomUserOperations().createRandomUser();
+
+  /* Example of extended onSuccess, onError, onSettled */
+  const handleCreateRandomUser = (data: User) => {
+    onCreateRandomUser(data, {
+      onSuccess: () => toast("Mutation Success (onCreateRandomUser)"),
+    });
+  };
 
   return (
     <div className="mx-auto flex min-h-screen flex-col items-center justify-center gap-6 px-4 text-center">
@@ -72,6 +84,7 @@ export default function Store(): JSX.Element {
         {isGetRandomUserFetching ? (
           <Button
             className="no-underline hover:underline"
+            // eslint-disable-next-line @typescript-eslint/no-misused-promises
             onClick={() => resetRandomUserData()}
             type="button"
           >
@@ -80,10 +93,18 @@ export default function Store(): JSX.Element {
         ) : null}
         <Button
           className="no-underline hover:underline"
+          // eslint-disable-next-line @typescript-eslint/no-misused-promises
           onClick={() => resetRandomUserData()}
           type="button"
         >
           Reset
+        </Button>
+        <Button
+          className="bg-secondary no-underline hover:underline"
+          onClick={() => handleCreateRandomUser(mockRandomUser)}
+          type="button"
+        >
+          Imitate mutation success
         </Button>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
