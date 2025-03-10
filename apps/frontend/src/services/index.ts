@@ -1,1 +1,1 @@
-export * from './random-user/randomUserServices'
+export * from './random-user/random-user-service'
