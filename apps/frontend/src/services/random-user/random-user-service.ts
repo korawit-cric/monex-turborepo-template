@@ -13,7 +13,7 @@ export const getRandomUserService = async (): Promise<AxiosResponse<Data>> => {
 };
 
 export const createRandomUserService = async (
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   data: User,
   // eslint-disable-next-line @typescript-eslint/require-await
 ): Promise<AxiosResponse<Data>> => {

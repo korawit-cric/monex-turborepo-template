@@ -4,7 +4,7 @@ const project = resolve(process.cwd(), "tsconfig.json");
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ["eslint:recommended", "prettier", "turbo"],
+  extends: ["eslint:recommended", "prettier"],
   plugins: ["only-warn"],
   globals: {
     React: true,
@@ -20,16 +20,10 @@ module.exports = {
       },
     },
   },
-  indent: [2, 2, { SwitchCase: 1 }], // Sync indent setting with `prettier`
   ignorePatterns: [
     // Ignore dotfiles
     ".*.js",
     "node_modules/",
     "dist/",
-  ],
-  overrides: [
-    {
-      files: ["*.js?(x)", "*.ts?(x)"],
-    },
   ],
 };

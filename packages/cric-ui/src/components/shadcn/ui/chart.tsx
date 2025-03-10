@@ -231,9 +231,11 @@ function ChartTooltipContent({
                         {itemConfig?.label || item.name}
                       </span>
                     </div>
-                    {item.value ? <span className="text-foreground font-mono font-medium tabular-nums">
+                    {item.value ? (
+                      <span className="text-foreground font-mono font-medium tabular-nums">
                         {item.value.toLocaleString()}
-                      </span> : null}
+                      </span>
+                    ) : null}
                   </div>
                 </>
               )}
@@ -337,9 +339,7 @@ function getPayloadConfigFromPayload(
     ] as string;
   }
 
-  return configLabelKey in config
-    ? config[configLabelKey]
-    : config[key];
+  return configLabelKey in config ? config[configLabelKey] : config[key];
 }
 
 export {

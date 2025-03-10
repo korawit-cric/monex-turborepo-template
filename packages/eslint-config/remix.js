@@ -9,6 +9,7 @@ const project = resolve(process.cwd(), "tsconfig.json");
 
 module.exports = {
   extends: [
+    "./index.js",
     "@vercel/style-guide/eslint/browser",
     "@vercel/style-guide/eslint/typescript",
     "@vercel/style-guide/eslint/react",

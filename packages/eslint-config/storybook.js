@@ -13,6 +13,7 @@ const project = resolve(process.cwd(), "tsconfig.json");
 
 module.exports = {
   extends: [
+    "./index.js",
     "plugin:storybook/recommended",
     "plugin:mdx/recommended",
     ...[

@@ -43,9 +43,11 @@ function ResizableHandle({
       data-slot="resizable-handle"
       {...props}
     >
-      {withHandle ? <div className="bg-border rounded-xs z-10 flex h-4 w-3 items-center justify-center border">
+      {withHandle ? (
+        <div className="bg-border rounded-xs z-10 flex h-4 w-3 items-center justify-center border">
           <GripVerticalIcon className="size-2.5" />
-        </div> : null}
+        </div>
+      ) : null}
     </ResizablePrimitive.PanelResizeHandle>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import { Toaster } from "@repo/cric-ui/components/shadcn/ui/sonner";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { toast } from "sonner";
 import {
   MutationCache,

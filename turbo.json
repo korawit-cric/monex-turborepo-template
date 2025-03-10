@@ -31,5 +31,6 @@
     "clean": {
       "cache": false
     }
-  }
+  },
+  "globalEnv": ["NODE_ENV", "SKIP_ENV_VALIDATION"]
 }
