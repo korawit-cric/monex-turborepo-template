@@ -12,11 +12,12 @@ This Turborepo includes the following packages and apps:
 - `backend`: An [Express](https://expressjs.com/) server
 - `workshop`: Component documentation/workshop site with 📖 [Storybook](https://storybook.js.org/) — UI component environment powered by Vite
 
+- `@repo/design-system`: per-project design system setup with tailwind and constants
+
 - `@repo/cric-ui`: prebuilt component with tailwind and cn utilities
 - `@repo/cric-form`: form components impremented and managed by React Hook Form extended from @repo/cric-ui
 - `@repo/eslint-config`: ESLint configurations used throughout the monorepo
 - `@repo/typescript-config`: tsconfig.json's used throughout the monorepo
-- `@repo/tailwind-config`: tsconfig.json's used throughout the monorepo
 
 Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
 

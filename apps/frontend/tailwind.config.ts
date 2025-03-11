@@ -1,30 +1,9 @@
-import sharedConfig from "@repo/tailwind-config";
-import { customHeight, customWidth } from "./src/styles/custom";
+import type { Config } from "tailwindcss";
+import designSystemConfig from "@repo/design-system/tailwind.config.ts";
 
-const config = {
-  presets: [sharedConfig],
-  theme: {
-    extend: {
-      minHeight: {
-        ...customHeight,
-      },
-      maxHeight: {
-        ...customHeight,
-      },
-      height: {
-        ...customHeight,
-      },
-      minWidth: {
-        ...customWidth,
-      },
-      maxWidth: {
-        ...customWidth,
-      },
-      width: {
-        ...customWidth,
-      },
-    },
-  },
+const config: Pick<Config, "presets" | "content"> = {
+  content: ["./src/**/*.tsx"],
+  presets: [designSystemConfig],
 };
 
 export default config;

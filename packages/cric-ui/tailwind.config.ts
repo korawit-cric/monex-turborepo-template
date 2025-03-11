@@ -1,9 +1,9 @@
 import type { Config } from "tailwindcss";
-import sharedConfig from "@repo/tailwind-config";
+import designSystemConfig from "@repo/design-system/tailwind.config.ts";
 
-const config: Pick<Config, "prefix" | "presets" | "content"> = {
+const config: Pick<Config, "presets" | "content"> = {
   content: ["./src/**/*.tsx"],
-  presets: [sharedConfig],
+  presets: [designSystemConfig],
 };
 
 export default config;

@@ -15,7 +15,6 @@
     "@repo/cric-ui": "*",
     "@repo/design-system": "*",
     "@repo/eslint-config": "*",
-    "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@tanstack/react-query": "^5.64.0",

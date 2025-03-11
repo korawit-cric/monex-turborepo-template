@@ -5,6 +5,10 @@
     "./styles.css": [
       "./styles.css"
     ],
-    "./*": "./src/*.tsx"
+    "./tailwind.config.ts": "./tailwind.config.ts"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "*",
+    "tailwindcss": "^3.4.1"
   }
 }
