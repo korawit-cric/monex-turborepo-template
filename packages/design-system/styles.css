@@ -4,29 +4,43 @@
 
 @layer base {
   :root {
-    /* Example of more color variations  */
-    /* --primary-lighter: hsl(0, 84.2%, 90.2%); */
-    --primary-light: hsl(0, 84.2%, 80.2%);
-    --primary: hsl(0, 84.2%, 60.2%);
-    --primary-dark: hsl(0, 84.2%, 40.2%);
-    /* --primary-darker: hsl(0, 84.2%, 20.2%); */
+    /* Per-project CSS Variables respected to Design System */
 
-    --secondary-light: hsl(212, 97%, 67%);
-    --secondary: hsl(212, 97%, 47%);
-    --secondary-dark: hsl(212, 97%, 27%);
+    --brand-red: hsl(0, 84.2%, 60.2%);
+    --brand-red-secondary: hsl(0, 84.2%, 40.2%);
 
-    --muted-light: hsl(0, 0%, 85%);
-    --muted: hsl(0, 0%, 40%);
-    --muted-dark: hsl(0, 0%, 0%);
+    --brand-blue: hsl(212, 97%, 47%);
+    --brand-blue-secondary: hsl(212, 97%, 27%);
+    --brand-blue-tertiary: hsl(212, 97%, 17%);
 
-    --destructive-light: hsl(0, 84.2%, 80.2%);
-    --destructive: hsl(0, 84.2%, 60.2%);
-    --destructive-dark: hsl(0, 84.2%, 40.2%);
+    --brand-blue-light: hsl(212, 97%, 67%);
+    --brand-blue-light-secondary: hsl(212, 97%, 57%);
+    --brand-blue-light-tertiary: hsl(212, 97%, 47%);
+    --brand-blue-light-quaternary: hsl(212, 97%, 37%);
 
-    --background: hsl(240, 10%, 3.9%);
-    --foreground: hsl(0, 0%, 100%);
+    --achrom-dark: hsl(0, 0%, 0%);
+    --achrom-dark-secondary: hsla(0, 0%, 40%, 1);
+    --achrom-dark-tertiary: hsla(0, 0%, 60%, 1);
+    --achrom-light-tertiary: hsla(0, 0%, 85%, 1);
+    --achrom-light-secondary: hsla(0, 0%, 98%, 1);
+    --achrom-light: hsl(0, 0%, 100%);
 
-    /* Default CSS Variables of Shadcn-ui Components  */
+    --background: var(--achrom-dark);
+    --foreground: var(--achrom-light);
+
+    /* Default CSS Variables of Shadcn-ui Components (Supposed to be updated) */
+
+    --destructive: var(--brand-red);
+    --muted: var(--achrom-light-tertiary);
+    --border: var(--muted-light);
+    --input: var(--muted-light);
+    --ring: var(--muted-dark);
+    --radius: 0.5rem;
+
+    --primary: var(--brand-red);
+    --secondary: var(--brand-blue);
+
+    /* Default CSS Variables of Specific Shadcn-ui Components (Doesn't have to be updated)  */
 
     --primary-foreground: var(--foreground);
     --secondary-foreground: var(--foreground);
@@ -37,11 +51,6 @@
     --accent: var(--secondary);
     --accent-dark: var(--secondary-dark);
     --accent-foreground: var(--foreground);
-
-    --border: var(--muted-light);
-    --input: var(--muted-light);
-    --ring: var(--muted-dark);
-    --radius: 0.5rem;
 
     --card: var(--background);
     --card-foreground: var(--foreground);

@@ -51,7 +51,7 @@ export default function Store(): JSX.Element {
           ({locale.toUpperCase()})
         </span>
       </h1>
-      <p className="text-muted-light font-medium">
+      <p className="text-muted font-medium">
         Built With{" "}
         <Link
           className="text-secondary no-underline hover:underline"
