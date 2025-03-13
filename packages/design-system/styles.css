@@ -18,20 +18,20 @@
     --brand-blue-light-tertiary: hsl(212, 97%, 47%);
     --brand-blue-light-quaternary: hsl(212, 97%, 37%);
 
-    --achrom-dark: hsl(0, 0%, 0%);
-    --achrom-dark-secondary: hsla(0, 0%, 40%, 1);
-    --achrom-dark-tertiary: hsla(0, 0%, 60%, 1);
-    --achrom-light-tertiary: hsla(0, 0%, 85%, 1);
-    --achrom-light-secondary: hsla(0, 0%, 98%, 1);
-    --achrom-light: hsl(0, 0%, 100%);
+    --noir-dark: hsl(0, 0%, 0%);
+    --noir-dark-secondary: hsla(0, 0%, 40%, 1);
+    --noir-dark-tertiary: hsla(0, 0%, 60%, 1);
+    --noir-light-tertiary: hsla(0, 0%, 85%, 1);
+    --noir-light-secondary: hsla(0, 0%, 98%, 1);
+    --noir-light: hsl(0, 0%, 100%);
 
-    --background: var(--achrom-dark);
-    --foreground: var(--achrom-light);
+    --background: var(--noir-dark);
+    --foreground: var(--noir-light);
 
     /* Default CSS Variables of Shadcn-ui Components (Supposed to be updated) */
 
     --destructive: var(--brand-red);
-    --muted: var(--achrom-light-tertiary);
+    --muted: var(--noir-light-tertiary);
     --border: var(--muted-light);
     --input: var(--muted-light);
     --ring: var(--muted-dark);

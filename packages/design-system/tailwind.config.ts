@@ -23,16 +23,16 @@ const config = {
             quaternary: "var(--brand-blue-light-quaternary)",
           },
         },
-        achrom: {
+        noir: {
           dark: {
-            DEFAULT: "var(--achrom-dark)",
-            secondary: "var(--achrom-dark-secondary)",
-            tertiary: "var(--achrom-dark-tertiary)",
+            DEFAULT: "var(--noir-dark)",
+            secondary: "var(--noir-dark-secondary)",
+            tertiary: "var(--noir-dark-tertiary)",
           },
           light: {
-            DEFAULT: "var(--achrom-light)",
-            secondary: "var(--achrom-light-secondary)",
-            tertiary: "var(--achrom-light-tertiary)",
+            DEFAULT: "var(--noir-light)",
+            secondary: "var(--noir-light-secondary)",
+            tertiary: "var(--noir-light-tertiary)",
           },
         },
       },
