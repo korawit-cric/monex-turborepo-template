@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
 
-const config = {
+// Base config
+const baseConfig = {
   // darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -33,36 +34,26 @@ const config = {
     },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
         primary: {
-          light: "var(--primary-light)",
           DEFAULT: "var(--primary)",
-          dark: "var(--primary-dark)",
           foreground: "var(--primary-foreground)",
         },
         secondary: {
-          light: "var(--secondary-light)",
           DEFAULT: "var(--secondary)",
-          dark: "var(--secondary-dark)",
           foreground: "var(--secondary-foreground)",
         },
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         muted: {
-          light: "var(--muted-light)",
           DEFAULT: "var(--muted)",
-          dark: "var(--muted-dark)",
           foreground: "var(--muted-foreground)",
         },
         destructive: {
-          light: "var(--destructive-light)",
           DEFAULT: "var(--destructive)",
-          dark: "var(--destructive-dark)",
           foreground: "var(--destructive-foreground)",
         },
         accent: {
-          light: "var(--accent-light)",
           DEFAULT: "var(--accent)",
-          dark: "var(--accent-dark)",
           foreground: "var(--accent-foreground)",
         },
         border: "var(--border)",
@@ -121,4 +112,4 @@ const config = {
   ],
 } satisfies Config;
 
-export default config;
+export default baseConfig;

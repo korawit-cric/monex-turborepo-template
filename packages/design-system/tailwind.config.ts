@@ -2,7 +2,8 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 import baseConfig from "./tailwind.base.config";
 import { customHeight, customWidth } from "./design-constants";
 
-const config = {
+// Per-project config
+const designSystemConfig = {
   presets: [baseConfig],
   theme: {
     extend: {
@@ -13,38 +14,34 @@ const config = {
         ],
       },
       colors: {
-        brand: {
-          red: {
-            DEFAULT: "var(--brand-red)",
-            secondary: "var(--brand-red-secondary)",
-          },
-          blue: {
-            DEFAULT: "var(--brand-blue)",
-            secondary: "var(--brand-blue-secondary)",
-            tertiary: "var(--brand-blue-tertiary)",
-          },
-          "blue-light": {
-            DEFAULT: "var(--brand-blue-light)",
-            secondary: "var(--brand-blue-light-secondary)",
-            tertiary: "var(--brand-blue-light-tertiary)",
-            quaternary: "var(--brand-blue-light-quaternary)",
-          },
+        "brand-red": {
+          "01": "var(--brand-red-01)",
+          "02": "var(--brand-red-02)",
+        },
+        "brand-blue": {
+          "01": "var(--brand-blue-01)",
+          "02": "var(--brand-blue-02)",
+        },
+        "brand-blue-light": {
+          "01": "var(--brand-blue-light-01)",
+          "02": "var(--brand-blue-light-02)",
+          "03": "var(--brand-blue-light-03)",
+          "04": "var(--brand-blue-light-04)",
         },
         noir: {
           dark: {
-            DEFAULT: "var(--noir-dark)",
-            secondary: "var(--noir-dark-secondary)",
-            tertiary: "var(--noir-dark-tertiary)",
+            "01": "var(--noir-dark-01)",
+            "02": "var(--noir-dark-02)",
+            "03": "var(--noir-dark-03)",
+            "04": "var(--noir-dark-04)",
           },
           light: {
-            DEFAULT: "var(--noir-light)",
-            secondary: "var(--noir-light-secondary)",
-            tertiary: "var(--noir-light-tertiary)",
+            "04": "var(--noir-light-04)",
+            "03": "var(--noir-light-03)",
+            "02": "var(--noir-light-02)",
+            "01": "var(--noir-light-01)",
           },
         },
-      },
-      minHeight: {
-        ...customHeight,
       },
       maxHeight: {
         ...customHeight,
@@ -65,4 +62,4 @@ const config = {
   },
 };
 
-export default config;
+export default designSystemConfig;

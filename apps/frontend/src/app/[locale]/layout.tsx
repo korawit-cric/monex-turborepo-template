@@ -27,7 +27,7 @@ export default async function RootLayout({
   const { locale } = await paramsPromise;
 
   return (
-    <html className={schibstedGtostesk.className} lang={locale}>
+    <html className={schibstedGtostesk.variable} lang={locale}>
       <body>
         <ServerAppProvider>
           <ClientAppProvider>{children}</ClientAppProvider>
