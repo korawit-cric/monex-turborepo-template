@@ -1,3 +1,4 @@
+import { fontFamily } from "tailwindcss/defaultTheme";
 import baseConfig from "./tailwind.base.config";
 import { customHeight, customWidth } from "./design-constants";
 
@@ -5,6 +6,12 @@ const config = {
   presets: [baseConfig],
   theme: {
     extend: {
+      fontFamily: {
+        "schibsted-grotesk": [
+          "var(--font-schibsted-grotesk)",
+          ...fontFamily.sans,
+        ],
+      },
       colors: {
         brand: {
           red: {

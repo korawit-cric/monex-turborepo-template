@@ -5,7 +5,10 @@ import "@repo/design-system/styles.css";
 import { Schibsted_Grotesk } from "next/font/google";
 import { ServerAppProvider, ClientAppProvider } from "~/providers";
 
-const schibstedGtostesk = Schibsted_Grotesk({ subsets: ["latin"] });
+const schibstedGtostesk = Schibsted_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-schibsted-grotesk",
+});
 
 export const metadata = {
   title: "cric-monex-root-template",
