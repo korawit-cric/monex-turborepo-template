@@ -5,47 +5,84 @@
 @layer base {
   :root {
     /* ------------------- */
-    /* Design System Colors */
+    /* Design System CSS Variables (Variable name is generalized across projects) */
     /* ------------------- */
 
-    --brand-red-01: hsl(0, 85%, 52%);
-    --brand-red-02: hsl(0, 85%, 37%);
+    /* Fonts */
+    --font-primary: var(--font-schibsted-grotesk);
+    /* --font-secondary: var(); */
+    /* --font-tertiary: var(); */
 
-    --brand-blue-01: hsl(212, 96%, 32%);
-    --brand-blue-02: hsl(212, 96%, 19%);
+    /* Primary Colors */
+    /* --primary-lighter: var(); */
+    /* --primary-lighter: var(); */
+    /* --primary-light: var(); */
+    --primary: hsl(0, 85%, 52%);
+    --primary-dark: hsl(0, 85%, 37%);
+    /* --primary-darker: var(); */
+    /* --primary-darkest: var(); */
 
-    --brand-blue-light-01: hsl(212, 97%, 47%);
-    --brand-blue-light-02: hsl(212, 85%, 89%);
-    --brand-blue-light-03: hsl(212, 85%, 95%);
-    --brand-blue-light-04: hsl(212, 82%, 98%);
+    /* Secondary Colors */
+    /* --secondary-lighter: var(); */
+    /* --secondary-lighter: var(); */
+    /* --secondary-light: var(); */
+    --secondary: hsl(212, 96%, 32%);
+    --secondary-dark: hsl(212, 96%, 19%);
+    /* --secondary-darkest: var(); */
 
-    --noir-dark-01: hsl(0, 0%, 0%);
-    --noir-dark-02: hsl(0, 0%, 40%);
-    --noir-dark-03: hsl(0, 0%, 60%);
-    --noir-dark-04: hsl(0, 0%, 80%);
+    /* Tertiary Colors */
+    --tertiary-lightest: hsl(212, 82%, 98%);
+    --tertiary-lighter: hsl(212, 85%, 95%);
+    --tertiary-light: hsl(212, 85%, 89%);
+    --tertiary: hsl(212, 97%, 47%);
+    /* --tertiary-dark: var(); */
+    /* --tertiary-darker: var(); */
+    /* --tertiary-darkest: var(); */
 
-    --noir-light-04: hsl(0, 0%, 90%);
-    --noir-light-03: hsl(0, 0%, 94%);
-    --noir-light-02: hsl(0, 0%, 98%);
+    /* Noir Colors (Baclk and White) */
     --noir-light-01: hsl(0, 0%, 100%);
+    --noir-light-02: hsl(0, 0%, 98%);
+    --noir-light-03: hsl(0, 0%, 94%);
+    --noir-light-04: hsl(0, 0%, 90%);
+    /* --noir-light-05: var(); */
+    /* --noir-dark-05: var(); */
+    --noir-dark-04: hsl(0, 0%, 80%);
+    --noir-dark-03: hsl(0, 0%, 60%);
+    --noir-dark-02: hsl(0, 0%, 40%);
+    --noir-dark-01: hsl(0, 0%, 0%);
+
+    --background: var(--noir-dark-01);
+    --foreground: var(--noir-light-01);
+
+    /* ------------------- */
+    /* Status/Feedback Colors */
+    /* ------------------- */
+
+    --success: hsl(145, 80%, 42%);
+    --success-light: hsl(145, 80%, 67%);
+    --success-dark: hsl(145, 80%, 30%);
+
+    --info: hsl(200, 90%, 50%);
+    --info-light: hsl(200, 90%, 75%);
+    --info-dark: hsl(200, 90%, 35%);
+
+    --warning: hsl(45, 95%, 50%);
+    --warning-light: hsl(45, 95%, 75%);
+    --warning-dark: hsl(45, 95%, 35%);
+
+    --error: hsl(0, 85%, 52%);
+    --error-light: hsl(0, 85%, 75%);
+    --error-dark: hsl(0, 85%, 40%);
 
     /* ------------------- */
     /* Utility Colors */
     /* ------------------- */
 
-    --primary: var(--brand-red-01);
-    --secondary: var(--brand-blue-01);
-
-    --background: var(--noir-dark-01);
-    --foreground: var(--noir-light-01);
-
-    --destructive: var(--brand-red-01);
-    --muted: var(--noir-light-03);
-    --border: var(--noir-light-04);
-
-    --input: var(--muted);
-    --ring: var(--muted);
     --radius: 0.5rem;
+
+    --border: var(--noir-light-04);
+    --muted: var(--noir-light-03);
+    --destructive: var(--error);
 
     /* ------------------- */
     /* Default CSS Variables for Shadcn-ui Components  */
@@ -53,6 +90,9 @@
 
     --primary-foreground: var(--foreground);
     --secondary-foreground: var(--foreground);
+
+    --input: var(--muted);
+    --ring: var(--muted);
 
     --muted-foreground: var(--foreground);
     --destructive-foreground: var(--foreground);
@@ -79,6 +119,12 @@
   /* .dark {
   ...
   } */
+  /* or Accessibility Mode */
+  /* .theme-large {
+  --font-size-base: 18px;
+  ...
+  }
+  */
 }
 
 @layer base {
