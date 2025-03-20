@@ -84,13 +84,13 @@
     --muted: var(--noir-light-03);
     --destructive: var(--error);
 
+    --primary-foreground: var(--noir-dark-01);
+    --secondary-foreground: var(--noir-light-01);
+    /* --tertiary-foreground: var(); */
+
     /* ------------------- */
     /* Default CSS Variables for Shadcn-ui Components  */
     /* ------------------- */
-
-    --primary-foreground: var(--foreground);
-    --secondary-foreground: var(--foreground);
-    --tertiary-foreground: var(--foreground);
 
     --input: var(--muted);
     --ring: var(--muted);
@@ -98,7 +98,7 @@
     --muted-foreground: var(--foreground);
     --destructive-foreground: var(--foreground);
 
-    --accent: var(--secondary);
+    --accent: var(--background);
     --accent-foreground: var(--foreground);
 
     --card: var(--background);
@@ -122,7 +122,27 @@
   } */
   /* or Accessibility Mode */
   /* .theme-large {
-  --font-size-base: 18px;
+  // Font Size Variables
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 30px;
+  --font-size-3xl: 36px;
+  --font-size-4xl: 48px;
+  --font-size-5xl: 60px;
+  --font-size-header: 36px;
+
+  // Line Height Variables ]
+  --line-height-sm: 1.25rem;
+  --line-height-base: 1.5rem;
+  --line-height-lg: 1.75rem;
+  --line-height-xl: 2rem;
+  --line-height-2xl: 2.25rem;
+  --line-height-3xl: 2.5rem;
+  --line-height-4xl: 3rem;
+  --line-height-5xl: 3.5rem;
+  --line-height-header: 2.5rem;
   ...
   }
   */

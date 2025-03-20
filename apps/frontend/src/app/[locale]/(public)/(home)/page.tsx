@@ -116,9 +116,10 @@ export default function Store(): JSX.Element {
           Reset
         </Button>
         <Button
-          className="bg-secondary no-underline hover:underline"
+          className="no-underline hover:underline"
           onClick={() => handleCreateRandomUser(mockRandomUser)}
           type="button"
+          variant="secondary"
         >
           Imitate mutation success
         </Button>
