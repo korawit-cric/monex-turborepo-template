@@ -52,8 +52,8 @@
     --noir-09: hsl(0, 0%, 98%);
     --noir-10: hsl(0, 0%, 100%);
 
-    --background: var(--noir-dark-01);
-    --foreground: var(--noir-light-01);
+    --background: var(--noir-01);
+    --foreground: var(--noir-10);
 
     /* ------------------- */
     /* Status/Feedback Colors */
@@ -81,12 +81,12 @@
 
     --radius: 0.5rem;
 
-    --border: var(--noir-light-04);
-    --muted: var(--noir-light-03);
+    --border: var(--noir-07);
+    --muted: var(--noir-08);
     --destructive: var(--error);
 
-    --primary-foreground: var(--noir-dark-01);
-    --secondary-foreground: var(--noir-light-01);
+    --primary-foreground: var(--noir-01);
+    --secondary-foreground: var(--noir-10);
     /* --tertiary-foreground: var(); */
 
     /* ------------------- */
