@@ -3,6 +3,7 @@
 import { useLocale } from "next-intl";
 import { Button } from "@repo/cric-ui/components/shadcn/ui/button";
 import { toast } from "sonner";
+import { useEffect } from "react";
 import { Link } from "~/lib/next-intl/navigation";
 import { useRandomUserOperations } from "~/operations/random-user/use-random-user-operations";
 import type { Locale } from "~/lib/next-intl";
@@ -14,23 +15,41 @@ import type { User } from "~/services/random-user/type";
 export default function Store(): JSX.Element {
   const locale = useLocale() as Locale;
   const {
-    randomUserData,
+    randomUserData, // Renaming frequently used main return values or hooks from inside
     fetchMoreRandomUser,
-    isGetRandomUserFetching,
+    cancelRandomUserFetching,
     resetRandomUserData,
+    isFetching: isGetRandomUserFetching, // Others are still accessible through destructuring and can be used/rename outside or move it inside as you see fit
+    isSuccess: isGetRandomUserSuccess,
+    isError: isGetRandomUserError,
+    error: randomUserError,
   } = useRandomUserOperations().getRandomUserInfinitely();
 
   const { onCreateRandomUser } = useRandomUserOperations().createRandomUser();
 
-  /* Example of extended onSuccess, onError, onSettled */
+  /* Example of extended onSuccess, onError, onSettled (Not work on useQuery() since Tanstack Query V5) */
   const handleCreateRandomUser = (data: User) => {
     onCreateRandomUser(data, {
       onSuccess: () => toast("Mutation Success (onCreateRandomUser)"),
+      onError: (error) =>
+        toast(`Mutation Error (onCreateRandomUser): ${error.message}`),
     });
   };
 
+  /* Example of handling errors of useQuery() */
+  /* Since Tanstack Query V5, onSuccess, onError, onSettled is no longer supported for useQuery() */
+  useEffect(() => {
+    if (isGetRandomUserSuccess) {
+      toast("Query Success (isGetRandomUserSuccess)");
+    }
+    if (isGetRandomUserError) {
+      toast(`Query Error (isGetRandomUserError): ${randomUserError.message}`);
+    }
+  }, [isGetRandomUserError, isGetRandomUserSuccess, randomUserError?.message]);
+
   return (
     <div className="mx-auto flex min-h-screen flex-col items-center justify-center gap-6 px-4 text-center">
+      {/* Example of using svg via SVGR */}
       <CricLogo className="relative h-16 w-16" />
       {/* Example of using next/image without manually setting width and height
       <div className="relative w-16 h-16">
@@ -85,7 +104,7 @@ export default function Store(): JSX.Element {
           <Button
             className="no-underline hover:underline"
             // eslint-disable-next-line @typescript-eslint/no-misused-promises
-            onClick={() => resetRandomUserData()}
+            onClick={() => cancelRandomUserFetching()}
             type="button"
           >
             Cancel

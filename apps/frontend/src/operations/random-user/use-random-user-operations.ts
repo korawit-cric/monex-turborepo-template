@@ -93,7 +93,6 @@ const useGetRandomUserInfinitely = () => {
         queryKey: [QUERY_KEY.RANDOM_USER],
       }),
     randomUserData: query.data,
-    isGetRandomUserFetching: query.isFetching,
     fetchMoreRandomUser: query.fetchNextPage,
     ...query,
   };
