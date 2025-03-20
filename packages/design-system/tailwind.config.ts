@@ -72,6 +72,7 @@ const config = {
           dark: "var(--primary-dark)",
           darker: "var(--primary-darker)",
           darkest: "var(--primary-darkest)",
+          foreground: "var(--primary-foreground)",
         },
         secondary: {
           lightest: "var(--secondary-lightest)",
@@ -81,6 +82,7 @@ const config = {
           dark: "var(--secondary-dark)",
           darker: "var(--secondary-darker)",
           darkest: "var(--secondary-darkest)",
+          foreground: "var(--secondary-foreground)",
         },
         tertiary: {
           lightest: "var(--tertiary-lightest)",
@@ -90,6 +92,7 @@ const config = {
           dark: "var(--tertiary-dark)",
           darker: "var(--tertiary-darker)",
           darkest: "var(--tertiary-darkest)",
+          foreground: "var(--tertiary-foreground)",
         },
         noir: {
           dark: {

@@ -90,6 +90,7 @@
 
     --primary-foreground: var(--foreground);
     --secondary-foreground: var(--foreground);
+    --tertiary-foreground: var(--foreground);
 
     --input: var(--muted);
     --ring: var(--muted);
