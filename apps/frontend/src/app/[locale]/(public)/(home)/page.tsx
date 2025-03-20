@@ -4,13 +4,13 @@ import { useLocale } from "next-intl";
 import { Button } from "@repo/cric-ui/components/shadcn/ui/button";
 import { toast } from "sonner";
 import { useEffect } from "react";
+import { CricImage } from "@repo/cric-ui/components/custom/cric-image";
 import { Link } from "~/lib/next-intl/navigation";
 import { useRandomUserOperations } from "~/operations/random-user/use-random-user-operations";
 import type { Locale } from "~/lib/next-intl";
-import CricLogo from "~/assets/logo/cric-logo.svg"; // adjust path as needed
+import CricLogo from "~/assets/logo/cric-logo.svg";
 import { mockRandomUser } from "~/services/random-user/mock-random-user";
 import type { User } from "~/services/random-user/type";
-// import Image from "next/image";
 
 export default function Store(): JSX.Element {
   const locale = useLocale() as Locale;
@@ -51,15 +51,6 @@ export default function Store(): JSX.Element {
     <div className="mx-auto flex min-h-screen flex-col items-center justify-center gap-6 px-4 text-center">
       {/* Example of using svg via SVGR */}
       <CricLogo className="relative h-16 w-16" />
-      {/* Example of using next/image without manually setting width and height
-      <div className="relative w-16 h-16">
-      <Image
-      src="/assets/logo/cric-logo.svg"
-      alt="Description of image"
-      fill
-      className="object-cover rounded-lg"
-      />
-    </div> */}
       <h1 className="m-0 text-4xl font-bold">
         Criclabs <br />
         <span className="from-primary to-secondary mt-4 inline-block bg-gradient-to-r bg-clip-text text-3xl text-transparent">
@@ -88,6 +79,12 @@ export default function Store(): JSX.Element {
           Next.js
         </Link>
       </p>
+      {/* Example of using CricImage which is just wrapped next/image without having to manually setting width and height */}
+      <CricImage
+        alt="Description of image"
+        className="relative h-32 w-32"
+        src="/assets/image/rick-roll.png"
+      />
       <div className="flex gap-4">
         <Button
           className="no-underline hover:underline"
