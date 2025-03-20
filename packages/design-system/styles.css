@@ -14,42 +14,43 @@
     /* --font-tertiary: var(); */
 
     /* Primary Colors */
-    /* --primary-lighter: var(); */
-    /* --primary-lighter: var(); */
-    /* --primary-light: var(); */
-    --primary: hsl(0, 85%, 52%);
-    --primary-dark: hsl(0, 85%, 37%);
-    /* --primary-darker: var(); */
     /* --primary-darkest: var(); */
+    /* --primary-darker: var(); */
+    --primary-dark: hsl(0, 85%, 37%);
+    --primary: hsl(0, 85%, 52%);
+    /* --primary-light: var(); */
+    /* --primary-lighter: var(); */
+    /* --primary-lightest: var(); */
 
     /* Secondary Colors */
-    /* --secondary-lighter: var(); */
-    /* --secondary-lighter: var(); */
-    /* --secondary-light: var(); */
-    --secondary: hsl(212, 96%, 32%);
-    --secondary-dark: hsl(212, 96%, 19%);
     /* --secondary-darkest: var(); */
+    /* --secondary-darker: var(); */
+    --secondary-dark: hsl(212, 96%, 19%);
+    --secondary: hsl(212, 96%, 32%);
+    /* --secondary-light: var(); */
+    /* --secondary-lighter: var(); */
+    /* --secondary-lightest: var(); */
 
     /* Tertiary Colors */
-    --tertiary-lightest: hsl(212, 82%, 98%);
-    --tertiary-lighter: hsl(212, 85%, 95%);
-    --tertiary-light: hsl(212, 85%, 89%);
-    --tertiary: hsl(212, 97%, 47%);
-    /* --tertiary-dark: var(); */
-    /* --tertiary-darker: var(); */
     /* --tertiary-darkest: var(); */
+    /* --tertiary-darker: var(); */
+    /* --tertiary-dark: var(); */
+    --tertiary: hsl(212, 97%, 47%);
+    --tertiary-light: hsl(212, 85%, 89%);
+    --tertiary-lighter: hsl(212, 85%, 95%);
+    --tertiary-lightest: hsl(212, 82%, 98%);
 
     /* Noir Colors (Baclk and White) */
-    --noir-light-01: hsl(0, 0%, 100%);
-    --noir-light-02: hsl(0, 0%, 98%);
-    --noir-light-03: hsl(0, 0%, 94%);
-    --noir-light-04: hsl(0, 0%, 90%);
-    /* --noir-light-05: var(); */
-    /* --noir-dark-05: var(); */
-    --noir-dark-04: hsl(0, 0%, 80%);
-    --noir-dark-03: hsl(0, 0%, 60%);
-    --noir-dark-02: hsl(0, 0%, 40%);
-    --noir-dark-01: hsl(0, 0%, 0%);
+    --noir-01: hsl(0, 0%, 0%);
+    --noir-02: hsl(0, 0%, 40%);
+    --noir-03: hsl(0, 0%, 60%);
+    --noir-04: hsl(0, 0%, 80%);
+    /* --noir-05: var(); */
+    /* --noir-06: var(); */
+    --noir-07: hsl(0, 0%, 90%);
+    --noir-08: hsl(0, 0%, 94%);
+    --noir-09: hsl(0, 0%, 98%);
+    --noir-10: hsl(0, 0%, 100%);
 
     --background: var(--noir-dark-01);
     --foreground: var(--noir-light-01);
@@ -58,21 +59,21 @@
     /* Status/Feedback Colors */
     /* ------------------- */
 
+    --success-dark: hsl(145, 80%, 30%);
     --success: hsl(145, 80%, 42%);
     --success-light: hsl(145, 80%, 67%);
-    --success-dark: hsl(145, 80%, 30%);
 
+    --info-dark: hsl(200, 90%, 35%);
     --info: hsl(200, 90%, 50%);
     --info-light: hsl(200, 90%, 75%);
-    --info-dark: hsl(200, 90%, 35%);
 
+    --warning-dark: hsl(45, 95%, 35%);
     --warning: hsl(45, 95%, 50%);
     --warning-light: hsl(45, 95%, 75%);
-    --warning-dark: hsl(45, 95%, 35%);
 
+    --error-dark: hsl(0, 85%, 40%);
     --error: hsl(0, 85%, 52%);
     --error-light: hsl(0, 85%, 75%);
-    --error-dark: hsl(0, 85%, 40%);
 
     /* ------------------- */
     /* Utility Colors */
