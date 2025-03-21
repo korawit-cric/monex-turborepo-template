@@ -1,16 +1,23 @@
+# OS files
 .DS_Store
+
+# Dependencies
 node_modules
 .turbo
+
+# Logs
 *.log
+
+# Build outputs
 .next
 dist
 dist-ssr
-*.local
-.env
-.cache
 server/dist
 public/dist
 
-// TODO: Remove this when a template is final
-// ignored only when used as a template
-package-lock.json
+# Local env files
+.env
+*.local
+
+# Cache
+.cache
