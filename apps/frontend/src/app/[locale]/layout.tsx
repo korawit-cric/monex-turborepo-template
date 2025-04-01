@@ -3,11 +3,12 @@ import "@repo/design-system/styles.css";
 
 // eslint-disable-next-line camelcase
 import { Schibsted_Grotesk } from "next/font/google";
+import { cn } from "@repo/cric-ui/lib/utils";
 import { ServerAppProvider, ClientAppProvider } from "~/providers";
 
 const schibstedGtostesk = Schibsted_Grotesk({
   subsets: ["latin"],
-  variable: "--font-schibsted-grotesk",
+  variable: "--font-primary",
 });
 
 export const metadata = {
@@ -27,7 +28,10 @@ export default async function RootLayout({
   const { locale } = await paramsPromise;
 
   return (
-    <html className={schibstedGtostesk.variable} lang={locale}>
+    <html
+      className={cn(schibstedGtostesk.variable, "font-primary")}
+      lang={locale}
+    >
       <body>
         <ServerAppProvider>
           <ClientAppProvider>{children}</ClientAppProvider>
