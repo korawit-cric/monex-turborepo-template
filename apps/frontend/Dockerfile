@@ -11,7 +11,7 @@ RUN npm install -g turbo
 COPY . .
 
 # Prune the project using Turbo
-RUN turbo prune --scope=cric-monex-root-template-frontend --docker
+RUN turbo prune --scope=monex-turborepo-template-frontend --docker
 
 # Install dependencies in a separate stage
 FROM base AS installer

@@ -54,7 +54,7 @@ export default function Store(): JSX.Element {
       <h1 className="m-0 text-4xl font-bold">
         Criclabs <br />
         <span className="from-primary to-secondary mt-4 inline-block bg-gradient-to-r bg-clip-text text-3xl text-transparent">
-          {`cric-monex-root-template`
+          {`monex-turborepo-template`
             .split("-")
             .map((word) => word.toUpperCase())
             .join(" ")}{" "}

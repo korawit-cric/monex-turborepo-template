@@ -12,7 +12,7 @@ const schibstedGtostesk = Schibsted_Grotesk({
 });
 
 export const metadata = {
-  title: "cric-monex-root-template",
+  title: "monex-turborepo-template",
   description:
     "A boilerplate template for building a monorepo architecture with Turborepo, Next.js, Express and cric-packages.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],

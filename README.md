@@ -1,4 +1,4 @@
-# cric-monex-root-template
+# monex-turborepo-template
 
 A boilerplate template for building a monorepo architecture with Turborepo, Next.js, Express and cric-packages. Designed to streamline development and enhance scalability for full-stack applications.
 
@@ -57,7 +57,7 @@ npm run dev
 
 ### Step 3 (Optional): Change all apps and packages name prefix
 
-To change all apps and package name prefixes in every package.json, Docker container, etc. within one step, globally search `cric-monex-root-template` and replace all. (through IDE)
+To change all apps and package name prefixes in every package.json, Docker container, etc. within one step, globally search `monex-turborepo-template` and replace all. (through IDE)
 
 if has error about node version/dependency mismatch, try:
 
